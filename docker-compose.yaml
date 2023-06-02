@@ -1,0 +1,16 @@
+version: "3"
+services:
+  qiushaocloud-code-server:
+    image: qiushaocloud/code-server:latest
+    container_name: qiushaocloud-code-server
+    hostname: qiushaocloud-code-server
+    # network_mode: "host"
+    expose: 
+      - 8080
+    ports:
+      - 8080:8080
+    volumes:
+      - ./code-server-config.yaml:/root/.config/code-server/config.yaml
+      - ./codes:/root/vscodes
+      - ./code-server-extensions:/root/.local/share/code-server/extensions
+      # - ./cert:/data/cert #如果需要 https，则这里需要放开，./cert 里面放 code-server.key 和 code-server.pem, code-server-config.yaml 需要放开 cert 相关的注释
