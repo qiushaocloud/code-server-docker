@@ -11,7 +11,7 @@ do
     echo killpid:$pid
     kill -9 $pid
 done
-nohup /usr/local/code-server/code-server >/dev/null 2>&1 &
+nohup /usr/local/code-server/bin/code-server >/dev/null 2>&1 &
 
 sleep 5
 
