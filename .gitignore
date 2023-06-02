@@ -18,6 +18,7 @@
 
 cert
 codes
-extensions
+extensions/*
+!extensions/dbaeumer.vscode-eslint-2.1.10
 code-server-config.yaml
 code-server-config.yaml.swp
