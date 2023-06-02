@@ -6,7 +6,7 @@ RUN apt install -y git
 
 COPY ./code-server-$CODE_SERVER_VERSION-linux-amd64.tar.gz /usr/local/code-server-$CODE_SERVER_VERSION-linux-amd64.tar.gz
 COPY ./bootstrap.sh /usr/local/bootstrap.sh
-# COPY ./extensions /root/.local/share/code-server/extensions
+COPY ./extensions /root/.local/share/code-server/extensions
 COPY ./code-server-config.yaml.tpl /root/.config/code-server/config.yaml
 
 RUN cd /usr/local \
